@@ -1,9 +1,34 @@
-import { javascript } from "projen";
+import { javascript, web, typescript } from "projen";
 import { monorepo } from "@aws/pdk";
-const project = new monorepo.MonorepoTsProject({
-  devDeps: ["@aws/pdk"],
+const repo = new monorepo.MonorepoTsProject({
   name: "projen-express-react-typescript",
-  packageManager: javascript.NodePackageManager.YARN,
+  devDeps: ["@aws/pdk"],
+  packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
 });
-project.synth();
+// @ts-ignore
+const backend = new typescript.TypeScriptAppProject({
+  name: "backend",
+  defaultReleaseBranch: "main",
+  parent: repo,
+  outdir: "backend",
+  packageManager: javascript.NodePackageManager.NPM,
+  devDeps: ['nodemon', '@types/cors'],
+  deps: ['express', 'cors']
+});
+// @ts-ignore
+const frontend = new web.ReactTypeScriptProject({
+  name: "frontend",
+  defaultReleaseBranch: "main",
+  parent: repo,
+  outdir: "frontend",
+  packageManager: javascript.NodePackageManager.NPM,
+  prettier: true
+});
+backend.addTask('dev', {
+  exec: 'nodemon src/index.ts',
+});
+repo.addTask('dev', {
+  exec: 'npx projen run-many --all --targets=dev',
+});
+repo.synth();
