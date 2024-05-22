@@ -2,3 +2,4 @@ name: abc
 on: [push]
 jobs:
   foobar:
+    steps:
