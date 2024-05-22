@@ -14,7 +14,7 @@ const backend = new typescript.TypeScriptAppProject({
   outdir: "backend",
   packageManager: javascript.NodePackageManager.NPM,
   devDeps: ['nodemon', '@types/cors'],
-  deps: ['express', 'cors']
+  deps: ['express', 'cors', "dotenv"]
 });
 // @ts-ignore
 const frontend = new web.ReactTypeScriptProject({

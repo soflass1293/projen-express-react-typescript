@@ -26,7 +26,7 @@ app.get("/todos", (_: Request, res: Response) => {
       console.log(error);
     }
   };
-  fn();
+  void fn();
 });
 
 app.listen(port, () => {
