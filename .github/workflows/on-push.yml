@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
       - name: Install dependencies
-        run: npx projen
+        run: npm install
       - name: Build
         run: npx projen build
       - name: chooooooououououououofffffffff
