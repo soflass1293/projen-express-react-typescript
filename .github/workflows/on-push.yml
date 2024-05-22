@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: viewwwwwwwwwww
         run: pwd && ls -al
 
