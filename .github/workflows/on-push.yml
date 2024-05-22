@@ -27,6 +27,8 @@ jobs:
       - name: Build frontend application
         working-directory: ./frontend
         run: npx projen build
+      - name: chooooooououououououofffffffff
+        run: pwd && ls -al
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
