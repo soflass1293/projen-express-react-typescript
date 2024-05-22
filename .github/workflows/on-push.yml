@@ -22,11 +22,11 @@ jobs:
     env:
       REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
     steps:
-      - name: Build
-        working-directory: ./frontend
-        run: pwd && npx projen build
       - name: viewwwwwww
         run: pwd && ls -al
+      - name: Build
+        working-directory: ./frontend
+        run: npx projen build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
