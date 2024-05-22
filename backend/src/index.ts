@@ -17,7 +17,7 @@ app.get("/", (_: Request, res: Response) => {
 app.get("/todos", (_: Request, res: Response) => {
   const fn = async () => {
     try {
-      fetch(`${URL}/todos`)
+      void fetch(`${URL}/todos`)
         .then((response) => response.json())
         .then((json) => {
           res.send(json);

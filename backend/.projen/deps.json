@@ -72,6 +72,10 @@
       "type": "runtime"
     },
     {
+      "name": "dotenv",
+      "type": "runtime"
+    },
+    {
       "name": "express",
       "type": "runtime"
     }
