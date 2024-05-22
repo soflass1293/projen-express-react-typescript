@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: one
-        run: pro
       - name: Install dependencies
         run: npm install
       - name: Build project
