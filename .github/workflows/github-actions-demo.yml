@@ -2,6 +2,7 @@ name: abc
 on: [push]
 jobs:
   foobar:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Starting deployment..."
       - run: ls -al
