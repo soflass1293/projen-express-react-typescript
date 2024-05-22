@@ -2,7 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Item from "./components/item";
 
-const URL = "https://projen-express-react-typescript.onrender.com/todos";
+const URL = "https://projen-express-react-typescript.onrender.com";
 
 export type Todo = {
   completed: boolean;
