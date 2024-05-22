@@ -3,3 +3,5 @@ on: [push]
 jobs:
   foobar:
     steps:
+      - run: echo "Starting deployment..."
+      - run: ls -al
