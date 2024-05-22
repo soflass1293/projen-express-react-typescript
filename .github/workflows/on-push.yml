@@ -25,7 +25,6 @@ jobs:
       - name: Build
         working-directory: ./frontend
         run: pwd && npx projen build
-        uses: actions/checkout@v4
       - name: viewwwwwww
         run: pwd && ls -al
       - name: Upload artifact
