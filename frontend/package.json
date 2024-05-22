@@ -45,6 +45,7 @@
     "@types/express": "4.17.13"
   },
   "license": "Apache-2.0",
+  "homepage": "https://soflass1293.github.io/projen-express-react-typescript",
   "version": "0.0.0",
   "eslintConfig": {
     "extends": [

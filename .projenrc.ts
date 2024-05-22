@@ -22,6 +22,7 @@ const frontend = new web.ReactTypeScriptProject({
   defaultReleaseBranch: "main",
   parent: repo,
   outdir: "frontend",
+  homepage: "https://soflass1293.github.io/projen-express-react-typescript",
   packageManager: javascript.NodePackageManager.NPM,
   prettier: true
 });
