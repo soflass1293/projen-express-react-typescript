@@ -16,7 +16,7 @@ jobs:
       - name: viewwwwwwwwwww
         run: pwd && ls -al
 
-  publish-npm:
+  frontend:
     needs: repo
     runs-on: ubuntu-latest
     steps:
@@ -27,5 +27,19 @@ jobs:
       - name: Build frontend application
         working-directory: ./frontend
         run: npx projen build
-      - name: seeeee
-        run: pwd && ls -al
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./build
+
+# Deployment job
+frontend:
+  environment:
+    name: github-pages
+    url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  needs: frontend
+  steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v3
