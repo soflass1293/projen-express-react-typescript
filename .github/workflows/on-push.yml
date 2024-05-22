@@ -17,8 +17,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
+      - name: First
+        run: pwd
       - name: Build project
-        run: npx projen build
+        run: cd frontend && npx projen build
+      - name: Second
+        run: pwd
       - name: List
         run: ls -al
       - name: Upload artifact
