@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Starting deployment..."
-      - run: ls -al
+      - run: ls ${{ github.workspace }}
