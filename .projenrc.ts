@@ -14,7 +14,7 @@ const backend = new typescript.TypeScriptAppProject({
   outdir: "backend",
   packageManager: javascript.NodePackageManager.NPM,
   devDeps: ['nodemon', '@types/cors'],
-  deps: ['express', 'cors']
+  deps: ['express', 'cors', "dotenv"]
 });
 // @ts-ignore
 const frontend = new web.ReactTypeScriptProject({
@@ -22,6 +22,7 @@ const frontend = new web.ReactTypeScriptProject({
   defaultReleaseBranch: "main",
   parent: repo,
   outdir: "frontend",
+  homepage: "https://soflass1293.github.io/projen-express-react-typescript",
   packageManager: javascript.NodePackageManager.NPM,
   prettier: true
 });
@@ -29,6 +30,6 @@ backend.addTask('dev', {
   exec: 'nodemon src/index.ts',
 });
 repo.addTask('dev', {
-  exec: 'npx projen run-many --all --targets=dev',
+  exec: "REACT_APP_STAGE=dev npx projen run-many --all --targets=dev",
 });
 repo.synth();
