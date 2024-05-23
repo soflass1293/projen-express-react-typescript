@@ -30,6 +30,6 @@ backend.addTask('dev', {
   exec: 'nodemon src/index.ts',
 });
 repo.addTask('dev', {
-  exec: 'npx projen run-many --all --targets=dev',
+  exec: "REACT_APP_STAGE=dev npx projen run-many --all --targets=dev",
 });
 repo.synth();
