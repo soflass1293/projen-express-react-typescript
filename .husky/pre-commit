@@ -1,1 +1,1 @@
-osascript -e 'tell application "Terminal" to do script "echo hello"'
+echo echo hello > sayhi.command; chmod +x sayhi.command; open sayhi.command
