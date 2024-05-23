@@ -1,5 +1,5 @@
-import { javascript, web, typescript } from "projen";
 import { monorepo } from "@aws/pdk";
+import { javascript, typescript, web } from "projen";
 const repo = new monorepo.MonorepoTsProject({
   name: "projen-express-react-typescript",
   devDeps: ["@aws/pdk", "pre-push"],
