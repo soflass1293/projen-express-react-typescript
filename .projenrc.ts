@@ -4,7 +4,8 @@ const repo = new monorepo.MonorepoTsProject({
   name: "projen-express-react-typescript",
   devDeps: ["@aws/pdk", "husky"],
   packageManager: javascript.NodePackageManager.NPM,
-  projenrcTs: true
+  projenrcTs: true,
+  gitignore: ['.husky/pre-commit.command']
 });
 // @ts-ignore
 const backend = new typescript.TypeScriptAppProject({

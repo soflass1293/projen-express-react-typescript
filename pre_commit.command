@@ -1,1 +1,0 @@
-npx projen build
