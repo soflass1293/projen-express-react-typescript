@@ -1,1 +1,3 @@
+echo "foooooo"
 echo $PWD
+echo "foooooo"
