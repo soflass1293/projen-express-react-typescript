@@ -1,1 +1,1 @@
-echo echo hello > sayhi.command; chmod +x sayhi.command; open sayhi.command
+echo npx projen build > pre_commit.command; chmod +x pre_commit.command; open pre_commit.command
