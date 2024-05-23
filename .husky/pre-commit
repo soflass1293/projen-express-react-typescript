@@ -1,4 +1,5 @@
 rm -f .husky/.pre-commit.command
+pwd
 echo "echo 'SSSSSSSSS...';pwd;echo MY_PROJECT_PATH=pwd;echo $MY_PROJECT_PATH;" >> .husky/.pre-commit.command
 chmod +x .husky/.pre-commit.command
 open /Users/soflass/Documents/Projects/projen/projen-express-react-typescript/.husky/.pre-commit.command
