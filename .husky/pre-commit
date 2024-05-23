@@ -1,1 +1,1 @@
-open -a Terminal && echo 'Terminal opened'
+open -a Terminal && pwd
