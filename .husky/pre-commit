@@ -1,5 +1,5 @@
 rm -f .husky/.pre-commit.command
-MY_PROJECT_PATH=pwd
+MY_PROJECT_PATH=$PWD
 echo "fooooooo"
 echo $MY_PROJECT_PATH
 echo "fooooooo"
