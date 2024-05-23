@@ -1,2 +1,1 @@
-current_dir=$(pwd)
-osascript -e 'tell application "Terminal" to do script "echo \"Current directory: $current_dir\""'
+open -a Terminal && echo 'Terminal opened'
