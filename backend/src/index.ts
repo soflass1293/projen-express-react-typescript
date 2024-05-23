@@ -1,20 +1,20 @@
-import cors from "cors";
-import dotenv from "dotenv";
-import express, { Express, Request, Response } from "express";
+import cors from 'cors';
+import dotenv from 'dotenv';
+import express, { Express, Request, Response } from 'express';
 
 dotenv.config();
 
 const app: Express = express();
 const port = 3001;
-const URL = "https://jsonplaceholder.typicode.com";
+const URL = 'https://jsonplaceholder.typicode.com';
 
 app.use(cors<Request>());
 
-app.get("/", (_: Request, res: Response) => {
-  res.send({ status: "ok" });
+app.get('/', (_: Request, res: Response) => {
+  res.send({ status: 'ok' });
 });
 
-app.get("/todos", (_: Request, res: Response) => {
+app.get('/todos', (_: Request, res: Response) => {
   const fn = async () => {
     try {
       void fetch(`${URL}/todos`)
@@ -29,7 +29,7 @@ app.get("/todos", (_: Request, res: Response) => {
   void fn();
 });
 
-app.get("/posts", (_: Request, res: Response) => {
+app.get('/posts', (_: Request, res: Response) => {
   const fn = async () => {
     try {
       void fetch(`${URL}/posts`)
@@ -44,7 +44,7 @@ app.get("/posts", (_: Request, res: Response) => {
   void fn();
 });
 
-app.get("/albums", (_: Request, res: Response) => {
+app.get('/albums', (_: Request, res: Response) => {
   const fn = async () => {
     try {
       void fetch(`${URL}/albums`)
@@ -59,7 +59,7 @@ app.get("/albums", (_: Request, res: Response) => {
   void fn();
 });
 
-app.get("/photos", (_: Request, res: Response) => {
+app.get('/photos', (_: Request, res: Response) => {
   const fn = async () => {
     try {
       void fetch(`${URL}/photos`)
