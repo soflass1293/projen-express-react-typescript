@@ -2,10 +2,15 @@ import { javascript, web, typescript } from "projen";
 import { monorepo } from "@aws/pdk";
 const repo = new monorepo.MonorepoTsProject({
   name: "projen-express-react-typescript",
-  devDeps: ["@aws/pdk"],
+  devDeps: ["@aws/pdk", "pre-push"],
   packageManager: javascript.NodePackageManager.NPM,
-  projenrcTs: true,
+  projenrcTs: true
 });
+repo.addFields({
+  "pre-push": [
+    "build"
+  ]
+})
 // @ts-ignore
 const backend = new typescript.TypeScriptAppProject({
   name: "backend",

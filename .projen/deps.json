@@ -55,6 +55,10 @@
       "type": "build"
     },
     {
+      "name": "pre-push",
+      "type": "build"
+    },
+    {
       "name": "prettier",
       "type": "build"
     },
