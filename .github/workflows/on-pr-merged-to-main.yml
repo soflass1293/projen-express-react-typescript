@@ -1,4 +1,4 @@
-name: Repo
+name: PR Merged to Main
 on: ["push"]
 permissions:
   contents: read
@@ -7,6 +7,7 @@ permissions:
   
 jobs:
   deploy:    
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
