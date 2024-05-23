@@ -1,3 +1,3 @@
-echo "MY_PROJECT_PATH=\"Hello, World!\"" > a.txt
+echo "MY_PROJECT_PATH=\"Hello, World!\"" > .a
 
 open /Users/soflass/Documents/Projects/projen/projen-express-react-typescript/.husky/.a
