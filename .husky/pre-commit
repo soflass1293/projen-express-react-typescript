@@ -1,1 +1,2 @@
+echo "Husky Pre Commit hook"
 npx projen build
