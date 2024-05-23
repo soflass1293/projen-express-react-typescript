@@ -1,1 +1,1 @@
-echo npx projen build > pre_commit.command; chmod +x pre_commit.command; open pre_commit.command
+echo 'npx projen build' > pre_commit.command; chmod +x pre_commit.command; open pre_commit.command
