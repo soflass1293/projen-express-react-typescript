@@ -19,7 +19,8 @@
     "upgrade-deps": "npx projen upgrade-deps",
     "watch": "npx projen watch",
     "install:ci": "npx projen install:ci",
-    "synth-workspace": "npx projen"
+    "synth-workspace": "npx projen",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@aws/pdk": "^0.23.38",
@@ -32,9 +33,9 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
     "npm-check-updates": "^16.14.20",
     "nx": "16.0.0",
-    "pre-push": "^0.1.4",
     "prettier": "^3.2.5",
     "projen": "^0.79.24",
     "syncpack": "^12",
@@ -62,9 +63,6 @@
   "version": "0.0.0",
   "types": "lib/index.d.ts",
   "private": true,
-  "pre-push": [
-    "build"
-  ],
   "workspaces": {
     "packages": [
       "backend",

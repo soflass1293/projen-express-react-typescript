@@ -46,16 +46,16 @@
       "type": "build"
     },
     {
+      "name": "husky",
+      "type": "build"
+    },
+    {
       "name": "npm-check-updates",
       "type": "build"
     },
     {
       "name": "nx",
       "version": "^16",
-      "type": "build"
-    },
-    {
-      "name": "pre-push",
       "type": "build"
     },
     {
