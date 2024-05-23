@@ -1,2 +1,1 @@
-pwd
-open .husky/.a
+npx projen build
