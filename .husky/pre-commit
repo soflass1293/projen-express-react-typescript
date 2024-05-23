@@ -1,3 +1,6 @@
-echo "MY_PROJECT_PATH=\"Hello, World!\"" >> .husky/.pre-commit.command
+echo "$MY_PROJECT_PATH=\"Hello, World!\"" >> .husky/.pre-commit.command
+echo "'echo start'" >> .husky/.pre-commit.command
+echo "'echo $MY_PROJECT_PATH'" >> .husky/.pre-commit.command
+echo "'echo end'" >> .husky/.pre-commit.command
 chmod +x .husky/.pre-commit.command
 open /Users/soflass/Documents/Projects/projen/projen-express-react-typescript/.husky/.pre-commit.command
