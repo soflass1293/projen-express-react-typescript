@@ -1,2 +1,3 @@
-echo "MY_PROJECT_PATH=\"Hello, World!\"" >> .husky/.a
-open /Users/soflass/Documents/Projects/projen/projen-express-react-typescript/.husky/.a
+echo "MY_PROJECT_PATH=\"Hello, World!\"" >> .husky/.pre-commit.command
+chmod +x .husky/.pre-commit.command
+open /Users/soflass/Documents/Projects/projen/projen-express-react-typescript/.husky/.pre-commit.command
