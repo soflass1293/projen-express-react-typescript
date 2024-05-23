@@ -1,5 +1,5 @@
 echo "$MY_PROJECT_PATH=\"pwd\"" >> .husky/.pre-commit.command
-echo "'echo start'" >> .husky/.pre-commit.command
+echo "'echo \'start\''" >> .husky/.pre-commit.command
 echo "'echo $MY_PROJECT_PATH'" >> .husky/.pre-commit.command
 echo "'echo end'" >> .husky/.pre-commit.command
 chmod +x .husky/.pre-commit.command
