@@ -1,2 +1,2 @@
-cd ..
+cd /Users/soflass/Documents/Projects/projen/projen-express-react-typescript
 npx projen build
