@@ -30,6 +30,7 @@ jspm_packages/
 .yarn-integrity
 .cache
 .tmp
+.husky/pre-commit.command
 !/.prettierignore
 !/.prettierrc.json
 !/test/

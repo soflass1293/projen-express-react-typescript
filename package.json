@@ -19,8 +19,7 @@
     "upgrade-deps": "npx projen upgrade-deps",
     "watch": "npx projen watch",
     "install:ci": "npx projen install:ci",
-    "synth-workspace": "npx projen",
-    "prepare": "husky"
+    "synth-workspace": "npx projen"
   },
   "devDependencies": {
     "@aws/pdk": "^0.23.38",
