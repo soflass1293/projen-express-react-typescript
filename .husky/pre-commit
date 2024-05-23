@@ -1,2 +1,1 @@
 echo "pwd" > .husky/pre-commit.command; chmod +x .husky/pre-commit.command; open .husky/pre-commit.command
-
