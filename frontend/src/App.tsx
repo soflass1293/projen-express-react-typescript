@@ -1,43 +1,61 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Item from "./components/item";
+import Header from "./components/header";
 
-const URL = "https://projen-express-react-typescript.onrender.com";
+const stage = process.env.REACT_APP_STAGE;
+const URL =
+  stage === "dev"
+    ? "http://localhost:3001"
+    : "https://projen-express-react-typescript.onrender.com";
 
-export type Todo = {
-  completed: boolean;
+export type Resource = {
   id: number;
   title: string;
-  userId: number;
 };
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([]);
-  const handleFetch = () => {
+  const [tab, setTab] = useState("todos");
+  const [items, setItems] = useState<Resource[]>([]);
+  const handleFetch = (resource: string) => {
     const fn = async () => {
       try {
-        setTodos([]);
-        const response = await fetch(`${URL}/todos`);
+        setItems([]);
+        const response = await fetch(`${URL}/${resource}`);
         const json = await response.json();
-        setTodos(json);
+        setItems(json);
       } catch (error) {
-        setTodos([]);
+        setItems([]);
         console.log(error);
       }
     };
     void fn();
   };
   useEffect(() => {
-    handleFetch();
+    handleFetch("todos");
   }, []);
-
+  const handleClick = (title: string) => {
+    setTab(title);
+    handleFetch(title);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Todos</h1>
-      </header>
-      {todos.map((todo) => (
-        <Item key={todo.id} todo={todo} />
+      <div className="hero">
+        <Header title="todos" active={tab === "todos"} onClick={handleClick} />
+        <Header title="posts" active={tab === "posts"} onClick={handleClick} />
+        <Header
+          title="albums"
+          active={tab === "albums"}
+          onClick={handleClick}
+        />
+        <Header
+          title="photos"
+          active={tab === "photos"}
+          onClick={handleClick}
+        />
+      </div>
+      {items.map((item) => (
+        <Item key={item.id} item={item} />
       ))}
     </div>
   );

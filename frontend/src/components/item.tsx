@@ -1,6 +1,6 @@
-import { Todo } from "../App";
+import { Resource } from "../App";
 
-const Item = ({ todo }: { todo: Todo }) => (
-  <div className="item">{todo.title}</div>
+const Item = ({ item }: { item: Resource }) => (
+  <div className="item">{item.title}</div>
 );
 export default Item;

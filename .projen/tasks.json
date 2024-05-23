@@ -65,7 +65,7 @@
       "name": "dev",
       "steps": [
         {
-          "exec": "npx projen run-many --all --targets=dev"
+          "exec": "REACT_APP_STAGE=dev npx projen run-many --all --targets=dev"
         }
       ]
     },

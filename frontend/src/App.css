@@ -4,7 +4,12 @@ body {
 .App {
   text-align: center;
 }
-
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,12 +22,11 @@ body {
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-transform: capitalize;
 }
 
 .App-link {
@@ -39,4 +43,7 @@ body {
 }
 .item {
   background-color: white;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
