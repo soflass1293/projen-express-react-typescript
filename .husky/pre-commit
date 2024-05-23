@@ -1,1 +1,1 @@
-open -a Terminal "`npx projen build`"
+open -a Terminal "`pwd`"
