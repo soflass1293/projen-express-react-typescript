@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Header from "./components/header";
 import Item from "./components/item";
 
-import Header from "./components/header";
-
+var x = "foo";
 const stage = process.env.REACT_APP_STAGE;
 const URL =
   stage === "dev"

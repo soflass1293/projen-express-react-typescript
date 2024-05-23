@@ -1,2 +1,1 @@
-echo "Husky Pre Commit hook"
-npx projen build
+open -a Terminal "`pwd`"
