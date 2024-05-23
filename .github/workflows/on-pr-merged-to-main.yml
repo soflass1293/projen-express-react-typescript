@@ -1,5 +1,7 @@
 name: PR Merged to Main
-on: ["push"]
+on:
+  pull_request:
+    types: [closed]
 permissions:
   contents: read
   pages: write
