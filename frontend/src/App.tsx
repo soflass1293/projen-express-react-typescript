@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Item from "./components/item";
 import Header from "./components/header";
+import Item from "./components/item";
 
 const stage = process.env.REACT_APP_STAGE;
 const URL =
