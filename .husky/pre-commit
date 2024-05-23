@@ -1,1 +1,1 @@
-osascript -e 'tell app "Terminal" to do script "pwd"'
+osascript -e 'tell application "Terminal" to do script "pwd"'
