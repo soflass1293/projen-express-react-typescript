@@ -1,0 +1,6 @@
+rm -f .husky/.pre-commit.command
+PROJECT_ROOT_PATH=$PWD
+PRE_COMMIT_COMMAND="npx projen build"
+echo "cd $PROJECT_ROOT_PATH;$PRE_COMMIT_COMMAND" >> .husky/.pre-commit.command
+chmod +x .husky/.pre-commit.command
+open .husky/.pre-commit.command
