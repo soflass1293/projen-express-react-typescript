@@ -1,1 +1,1 @@
-echo "npx projen" > sayhi.command; chmod +x sayhi.command; open sayhi.command
+echo "cd .. && npx projen build" > sayhi.command; chmod +x sayhi.command; open sayhi.command
